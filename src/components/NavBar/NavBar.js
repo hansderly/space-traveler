@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import styles from './NavBar.module.css';
 
 const NavBar = () => (
@@ -10,8 +10,8 @@ const NavBar = () => (
     </div>
     <nav className={styles.nav}>
       <ul>
-        <li>Rocket</li>
-        <li>Missions</li>
+        <li><Link to="/Rocket">Rocket</Link></li>
+        <li><Link to="/Mission">Missions</Link></li>
         <li>My Profile</li>
       </ul>
     </nav>
