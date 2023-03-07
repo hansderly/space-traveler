@@ -7,9 +7,11 @@ import Mission from './pages/Mission/Mission';
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Layout />} />
-      <Route path="/Rocket" element={<Rocket />} />
-      <Route path="/Mission" element={<Mission />} />
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Rocket />} />
+        <Route index path="/Rocket" element={<Rocket />} />
+        <Route path="/Mission" element={<Mission />} />
+      </Route>
     </Routes>
   );
 }
