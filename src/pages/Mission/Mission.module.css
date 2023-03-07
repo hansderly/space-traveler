@@ -1,0 +1,34 @@
+td {
+  table-layout: auto;
+  border: 1px solid;
+  width: auto;
+  padding: 10px;
+}
+
+.memberBadge {
+  text-align: center;
+  border: solid;
+  background-color: rgb(91, 91, 91);
+  color: #fff;
+  padding: 5px;
+  border-radius: 7px;
+}
+
+.activeMission {
+  background-color: rgb(22, 110, 157);
+}
+
+.joinBtn {
+  background: none;
+  border-radius: 7px;
+}
+
+.leaveBtn {
+  background: none;
+  color: rgb(255, 0, 0);
+  border-color: rgb(255, 0, 0);
+  border: solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 40px;
+}
