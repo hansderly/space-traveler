@@ -19,7 +19,7 @@ const ButtonRocket = ({ varient, children, onClick }) => {
     },
   };
 
-  varient = varient === 'reserve' ? style.reserve : style.unreserve;
+  varient = !varient ? style.reserve : style.unreserve;
 
   return (
     <button style={varient} onClick={onClick} type="button">{children}</button>
