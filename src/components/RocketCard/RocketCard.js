@@ -1,22 +1,29 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './RocketCard.module.css';
 import ButtonRocket from '../ButonRocket/ButtonRocket';
 
-const RocketCard = () => (
+const RocketCard = ({
+  name, desc, img, onClick,
+}) => (
   <div className={styles.container}>
-    <img src="/assets/rocket.jpg" alt="ex" />
+    <img src={img} alt="ex" />
     <div className={styles.infos}>
-      <h2>Name</h2>
+      <h2>{name}</h2>
       <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-        Veritatis porro labore natus magnam ullam,
-        eveniet ut, at libero vitae sunt aliquid nulla iure, sint soluta voluptatem.
-        Doloremque sint quibusdam vero!
+        {desc}
       </p>
-      <ButtonRocket>Reserve Rocket</ButtonRocket>
+      <ButtonRocket onClick={onClick}>Reserve Rocket</ButtonRocket>
     </div>
   </div>
 );
+
+RocketCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+};
 
 export default RocketCard;

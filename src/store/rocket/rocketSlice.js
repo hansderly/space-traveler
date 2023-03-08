@@ -12,9 +12,9 @@ const fetchRocket = createAsyncThunk('rocket/getRocket', async () => {
     const { data } = await axios.get(url);
 
     const rockets = data.map(({
-      id, name, description, flickr_images: img,
+      id, name, description: desc, flickr_images: img,
     }) => ({
-      id, name, description, img,
+      id, name, desc, img,
     }));
 
     return { rockets };

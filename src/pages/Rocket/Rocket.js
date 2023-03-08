@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
-import { RocketCard } from '../../components';
+import { RocketCardList } from '../../components';
 import { fetchRocket } from '../../store/rocket/rocketSlice';
 import styles from './Rocket.module.css';
 
 const Rocket = () => {
   const dispatch = useDispatch();
+  const { rocket } = useSelector((store) => store.rocket);
 
   useEffect(() => {
     dispatch(fetchRocket());
@@ -14,9 +15,7 @@ const Rocket = () => {
 
   return (
     <div className={styles.container}>
-      <>
-        <RocketCard />
-      </>
+      <RocketCardList rockets={rocket} />
     </div>
   );
 };

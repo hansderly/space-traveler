@@ -1,9 +1,24 @@
 .container {
   display: flex;
   max-width: 1600px;
+  margin: 15px 0;
+  padding-top: 0;
 }
 
 .container > img {
-  width: 200px;
+  width: 250px;
   margin-right: 25px;
+}
+
+.infos > h2 {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.infos > button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  outline: 0;
+  border: 0;
 }
