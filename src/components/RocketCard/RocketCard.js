@@ -5,7 +5,7 @@ import ButtonRocket from '../ButonRocket/ButtonRocket';
 
 const RocketCard = () => (
   <div className={styles.container}>
-    <img src="/assets/planet.png" alt="ex" />
+    <img src="/assets/rocket.jpg" alt="ex" />
     <div className={styles.infos}>
       <h2>Name</h2>
       <p>
