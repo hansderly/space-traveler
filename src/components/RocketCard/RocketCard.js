@@ -5,7 +5,7 @@ import styles from './RocketCard.module.css';
 import ButtonRocket from '../ButonRocket/ButtonRocket';
 
 const RocketCard = ({
-  name, desc, img, onClick,
+  name, desc, img, reserved, onClick,
 }) => (
   <div className={styles.container}>
     <img src={img} alt="ex" />
@@ -14,7 +14,7 @@ const RocketCard = ({
       <p>
         {desc}
       </p>
-      <ButtonRocket onClick={onClick}>Reserve Rocket</ButtonRocket>
+      <ButtonRocket varient={reserved ? 'unreserve' : 'reserve'} onClick={onClick}>{reserved ? 'Cancel Reservation' : 'Reserve Rocket'}</ButtonRocket>
     </div>
   </div>
 );
@@ -23,6 +23,7 @@ RocketCard.propTypes = {
   name: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
+  reserved: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
 };
 
