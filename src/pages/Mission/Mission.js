@@ -20,28 +20,38 @@ function Mission() {
   };
 
   return (
-    <>
-      {missions.map((miss) => (
-        <tr className={styles.table} key={miss.id}>
-          <td className={styles.name}>{miss.name}</td>
-          <td className={styles.desc}>{miss.description}</td>
-          <td>
-            <div className={miss.joined ? `${styles.memberBadge} ${styles.activeMission}` : styles.memberBadge}>
-              {miss.joined ? 'Active Member' : 'NOT A MEMBER'}
-            </div>
-          </td>
-          <td>
-            <button
-              className={miss.joined ? styles.leaveBtn : styles.joinBtn}
-              type="button"
-              onClick={() => handleMissionJoin(miss)}
-            >
-              {miss.joined ? 'Leave Mission' : 'Join Mission'}
-            </button>
-          </td>
+    <table className={styles.theTable}>
+      <thead className={styles.heading}>
+        <tr>
+          <th className={styles.eachMiss}>Mission</th>
+          <th className={styles.eachDesc}>Description</th>
+          <th className={styles.eachStat}>Status</th>
+          <th className={styles.eachAct}>Action</th>
         </tr>
-      ))}
-    </>
+      </thead>
+      <tbody>
+        {missions.map((miss) => (
+          <tr className={styles.table} key={miss.id}>
+            <td className={styles.name}>{miss.name}</td>
+            <td className={styles.desc}>{miss.description}</td>
+            <td>
+              <div className={miss.joined ? `${styles.memberBadge} ${styles.activeMission}` : styles.memberBadge}>
+                {miss.joined ? 'Active Member' : 'NOT A MEMBER'}
+              </div>
+            </td>
+            <td>
+              <button
+                className={miss.joined ? styles.leaveBtn : styles.joinBtn}
+                type="button"
+                onClick={() => handleMissionJoin(miss)}
+              >
+                {miss.joined ? 'Leave Mission' : 'Join Mission'}
+              </button>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   );
 }
 
