@@ -9,7 +9,7 @@ function Mission() {
 
   useEffect(() => {
     dispatch(fetchMissionData());
-  }, [dispatch]);
+  }, []);
 
   const handleMissionJoin = (mission) => {
     if (mission.joined) {
