@@ -1,4 +1,5 @@
 import NavBar from './NavBar/NavBar';
+import RocketCard from './RocketCard/RocketCard';
+import RocketCardList from './RocketCardList/RocketCardList';
 
-// eslint-disable-next-line import/prefer-default-export
-export { NavBar };
+export { NavBar, RocketCard, RocketCardList };
