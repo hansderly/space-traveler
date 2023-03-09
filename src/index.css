@@ -1,3 +1,17 @@
+:root {
+  --badgeColor: #1aa1b9;
+  --blue: #0290ff;
+  --darkblue: rgb(0, 117, 207) f;
+  --black: #121212;
+  --wihite-2: #a0a0a0;
+  --lightblue: #4386bf;
+  --white: #e8e8e8;
+  --secondary-color: #8d8a8a;
+  --accent-color: #579bb1;
+  --text-color: #514f4f;
+  --container-margin: 1rem 5rem 1rem 5rem;
+}
+
 body {
   margin: 0;
   font-family:

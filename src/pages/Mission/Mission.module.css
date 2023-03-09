@@ -1,0 +1,70 @@
+table,
+td {
+  border: 1px solid;
+  border-collapse: collapse;
+}
+
+th {
+  border: 1px solid;
+  border-collapse: collapse;
+  height: 40px;
+}
+
+.name {
+  width: 10%;
+  padding: 10px;
+  height: 80px;
+}
+
+.eachStat {
+  width: 10%;
+}
+
+.eachAct {
+  width: 13%;
+}
+
+.table:nth-child(even) {
+  background-color: #ddd;
+}
+
+.memberBadge {
+  font-size: 13px;
+  text-align: center;
+  border: solid;
+  background-color: rgb(91, 91, 91);
+  color: #fff;
+  border-radius: 7px;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 3px;
+}
+
+.desc {
+  padding: 10px;
+}
+
+.activeMission {
+  background-color: rgb(61, 157, 166);
+  font-size: 13px;
+  text-align: center;
+  border: none;
+}
+
+.joinBtn {
+  background: none;
+  border: solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 40px;
+}
+
+.leaveBtn {
+  background: none;
+  color: rgb(255, 0, 0);
+  border-color: rgb(255, 0, 0);
+  border: solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 40px;
+}

@@ -12,7 +12,7 @@ const NavBar = () => (
       <ul>
         <li><Link to="/Rocket">Rocket</Link></li>
         <li><Link to="/Mission">Missions</Link></li>
-        <li>My Profile</li>
+        <li><Link to="/Profile">My Profile</Link></li>
       </ul>
     </nav>
   </header>
