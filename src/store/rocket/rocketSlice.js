@@ -14,7 +14,7 @@ const fetchRocket = createAsyncThunk('rocket/getRocket', async () => {
     const rockets = data.map(({
       id, name, description: desc, flickr_images: img,
     }) => ({
-      id, name, desc, img, reserved: false,
+      id, name, desc, img: img[0], reserved: false,
     }));
 
     return { rockets };
