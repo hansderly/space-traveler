@@ -28,7 +28,7 @@ const ButtonRocket = ({ varient, children, onClick }) => {
 
 ButtonRocket.propTypes = {
   onClick: PropTypes.func.isRequired,
-  varient: PropTypes.string.isRequired,
+  varient: PropTypes.bool.isRequired,
   children: PropTypes.node.isRequired,
 };
 

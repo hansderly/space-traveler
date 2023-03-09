@@ -26,7 +26,7 @@ RocketCard.propTypes = {
   name: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
-  reserved: PropTypes.string.isRequired,
+  reserved: PropTypes.bool.isRequired,
   onClick: PropTypes.func.isRequired,
 };
 

@@ -27,7 +27,13 @@ const RocketCardList = ({ rockets, onClick }) => {
 };
 
 RocketCardList.propTypes = {
-  rockets: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  rockets: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    desc: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+    reserved: PropTypes.bool.isRequired
+  })).isRequired,
   onClick: PropTypes.func.isRequired,
 };
 
