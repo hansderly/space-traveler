@@ -1,0 +1,42 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  border-bottom: solid;
+  border-color: rgb(175, 169, 169);
+  margin-bottom: 40px;
+}
+
+.headerLogo {
+  display: flex;
+  align-items: center;
+}
+
+.headerLogo > img {
+  width: 50px;
+  height: 50px;
+}
+
+.headerLogo > span {
+  font-size: 25px;
+  font-weight: 600;
+  margin-left: 15px;
+}
+
+.nav > ul {
+  display: flex;
+  gap: 25px;
+}
+
+.nav ul > li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav ul > li:hover {
+  text-decoration: underline;
+}
