@@ -4,19 +4,22 @@ import styles from './Profile.module.css';
 
 const MyProfile = () => {
   const { rocket } = useSelector((store) => store.rocket);
+  const { mission } = useSelector((store) => store.mission);
+
   const reserveRocket = rocket.filter((r) => r.reserved);
+  const joinedMissions = mission.filter((m) => m.joined);
 
   return (
     <div className={styles.profileContainer}>
       <section className={styles.myMissions}>
         <span className={styles.sectionTitle}>My Missions</span>
-        {[].length > 0 ? (
+        {joinedMissions.length > 0 ? (
           <ul className={styles.myMissionsList}>
-            {[].map((mission) => {
-              if (mission?.joined) {
+            {joinedMissions.map((miss) => {
+              if (miss?.joined) {
                 return (
-                  <li className={styles.item} key={mission.id}>
-                    {mission.missionName}
+                  <li className={styles.item} key={miss.id}>
+                    {miss.name}
                   </li>
                 );
               }
@@ -24,7 +27,7 @@ const MyProfile = () => {
             })}
           </ul>
         ) : (
-          <span>NO MISSIONS JOINED</span>
+          <span className={styles.no}>NO MISSIONS JOINED</span>
         )}
       </section>
       <section className={styles.myRockets}>
@@ -43,7 +46,7 @@ const MyProfile = () => {
             })}
           </ul>
         ) : (
-          <span>NO Rockets Reserved</span>
+          <span className={styles.no}>NO ROCKETS RESERVED</span>
         )}
       </section>
     </div>
