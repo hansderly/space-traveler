@@ -1,23 +1,30 @@
-import axios from 'axios';
-import MockAdapter from 'axios-mock-adapter';
-import store from '../store/store';
-import { fetchRocket } from '../store/rocket/rocketSlice';
+import { configureStore } from '@reduxjs/toolkit';
+import rocketReducer, { fetchRocket } from '../store/rocket/rocketSlice';
 
-describe('store', () => {
-  let mock;
-  
-  beforeEach(() => {
-    mock = new MockAdapter(axios);
+describe('Store', () => {
+  let store;
+
+  beforeAll(() => {
+    store = configureStore({
+      reducer: {
+        rocket: rocketReducer,
+      },
+    });
   });
 
-  it('get lsi of rocket', async () => {
+  it('should have the initial state', () => {
+    const initialState = {
+      rocket: [],
+    };
+    const { rocket } = store.getState().rocket;
 
-    const data = [{ id: 1, desc: 't' }, { id: 2, desc: 'y' }];
-    mock.onGet();
-    // mock.onGet('/rockets').reply(200, data);
+    expect(rocket).toEqual(initialState.rocket);
+  });
 
-    // await store.dispatch(fetchRocket());
-    // const { rocket } = store.getState().rocket;
-    // expect(rocket).toHaveLength(2);
+  it('should have length of 4', async () => {
+    await store.dispatch(fetchRocket());
+    const { rocket } = store.getState().rocket;
+
+    expect(rocket).toHaveLength(4);
   });
 });
