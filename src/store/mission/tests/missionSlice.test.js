@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import missionReducer, { fetchMissionData, joinMission, leaveMission } from './missionSlice';
+import missionReducer, { fetchMissionData, joinMission, leaveMission } from '../missionSlice';
 
 describe('missionSlice', () => {
   let store;
@@ -21,14 +21,16 @@ describe('missionSlice', () => {
   it('should join a mission successfully', () => {
     const missionId = 1; // Replace with a valid mission ID
     store.dispatch(joinMission(missionId));
-    const joinedMission = store.getState().mission.mission.find((mission) => mission.id === missionId);
+    const joinedMission = store.getState()
+      .mission.mission.find((mission) => mission.id === missionId);
     expect(joinedMission.joined).toBe(true);
   });
 
   it('should leave a mission successfully', () => {
     const missionId = 1; // Replace with a valid mission ID
     store.dispatch(leaveMission(missionId));
-    const leftMission = store.getState().mission.mission.find((mission) => mission.id === missionId);
+    const leftMission = store.getState()
+      .mission.mission.find((mission) => mission.id === missionId);
     expect(leftMission.joined).toBe(false);
   });
 });
