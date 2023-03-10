@@ -62,8 +62,6 @@
 
 > Here are some key features of the application :
 
-> Here are some key features of the application :
-
 - **Display the Rockets**
 - **Reserve Rockets**
 - **Display the Missions**
